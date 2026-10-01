@@ -1,0 +1,25 @@
+# Files that may be published. This list is authoritative.
+# Paths use / as in git ls-files. Empty lines and # comments are ignored.
+
+.gitattributes
+.gitignore
+LICENSE
+NppRestoreCursorPosition.rc
+NppRestoreCursorPosition.sln
+NppRestoreCursorPosition.vcxproj
+PUBLIC_FILES
+README.md
+build.bat
+npp/Notepad_plus_msgs.h
+npp/PluginInterface.h
+npp/Scintilla.h
+src/HistoryStore.cpp
+src/HistoryStore.h
+src/HistoryStore_test.cpp
+src/NppRestoreCursorPosition.cpp
+src/PluginDefinition.cpp
+src/PluginDefinition.h
+src/UiText.cpp
+src/UiText.h
+tools/check_public_files.ps1
+tools/check_version_info.ps1

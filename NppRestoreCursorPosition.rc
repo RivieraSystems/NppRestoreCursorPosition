@@ -1,0 +1,46 @@
+#include <windows.h>
+
+// LICENSE と同じ著作権者を書く
+#define RCP_COMPANY   "RivieraSystems"
+#define RCP_COPYRIGHT "Copyright (c) 2026 RivieraSystems. MIT License."
+
+#define RCP_VER_MAJOR 1
+#define RCP_VER_MINOR 0
+#define RCP_VER_PATCH 0
+#define RCP_VER_BUILD 0
+#define RCP_VER_STRING "1.0.0.0"
+
+VS_VERSION_INFO VERSIONINFO
+	FILEVERSION    RCP_VER_MAJOR, RCP_VER_MINOR, RCP_VER_PATCH, RCP_VER_BUILD
+	PRODUCTVERSION RCP_VER_MAJOR, RCP_VER_MINOR, RCP_VER_PATCH, RCP_VER_BUILD
+	FILEFLAGSMASK  VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+	FILEFLAGS      VS_FF_DEBUG
+#else
+	FILEFLAGS      0x0L
+#endif
+	FILEOS         VOS_NT_WINDOWS32
+	FILETYPE       VFT_DLL
+	FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		// 0409 = English (US) / 04B0 = Unicode. rc.exe is invoked with /l"0x0409".
+		// Keep these values ASCII; Japanese in this language ID can mojibake.
+		BLOCK "040904B0"
+		BEGIN
+			VALUE "CompanyName",      RCP_COMPANY
+			VALUE "FileDescription",  "NppRestoreCursorPosition - restore last caret position in Notepad++"
+			VALUE "FileVersion",      RCP_VER_STRING
+			VALUE "InternalName",     "NppRestoreCursorPosition"
+			VALUE "LegalCopyright",   RCP_COPYRIGHT
+			VALUE "OriginalFilename", "NppRestoreCursorPosition.dll"
+			VALUE "ProductName",      "NppRestoreCursorPosition"
+			VALUE "ProductVersion",   RCP_VER_STRING
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+END

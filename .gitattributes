@@ -1,0 +1,8 @@
+* text=auto
+
+*.dll binary
+*.exe binary
+*.pdb binary
+
+# rc.exe is invoked with /l"0x0409", so keep .rc as ASCII
+*.rc text
